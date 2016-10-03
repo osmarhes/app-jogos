@@ -51,10 +51,10 @@ public class ConfiguracaoJPA {
 	   @Bean
 	   public DataSource dataSource(){
 	      DriverManagerDataSource dataSource = new DriverManagerDataSource();
-	      dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	      dataSource.setUrl("jdbc:mysql://localhost:3306/jogo_caixa");
-	      dataSource.setUsername( "root" );
-	      dataSource.setPassword( "91518135" );
+	      dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
+	      dataSource.setUrl("jdbc:hsqldb:hsql://localhost/jogos");
+	      dataSource.setUsername( "sa" );
+	      dataSource.setPassword( "" );
 	      return dataSource;
 	   }
 	 
@@ -73,7 +73,7 @@ public class ConfiguracaoJPA {
 	   Properties additionalProperties() {
 	      Properties properties = new Properties();
 	      properties.setProperty("hibernate.hbm2ddl.auto", "update");
-	      properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+	      properties.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
 	      properties.setProperty("hibernate.show_sql", "true");
 	      return properties;
 	   }

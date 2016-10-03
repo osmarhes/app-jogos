@@ -13,9 +13,9 @@ import br.com.loteria.app.entity.Concursos;
 @Repository
 public interface ConcursosRepository extends JpaRepository<Concursos, Integer> {
 
-	@Query("select c from concursos c where c.dataSorteio = :dataSorteio")
+	@Query("select c from Concursos c where c.dataSorteio = :dataSorteio")
 	List<Concursos> getByDate(@Param("dataSorteio")Date dataSorteio);
 	
-	@Query("select c from concursos c order by id desc")
+	@Query("select c from Concursos c order by id desc")
 	List<Concursos> lista();
 }

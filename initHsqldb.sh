@@ -1,0 +1,1 @@
+java -cp /home/osmar/.m2/repository/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar org.hsqldb.Server -database.0 file:/home/osmar/java/db/jogos -dbname.0 jogos

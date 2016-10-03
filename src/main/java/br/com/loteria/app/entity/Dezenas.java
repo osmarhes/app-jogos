@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,7 +17,8 @@ import lombok.ToString;
 @Data
 @ToString(exclude={"concurso"})
 @EqualsAndHashCode(exclude={"concurso"})
-@Entity(name="dezenas")
+@Entity
+@Table(name="dezenas")
 public class Dezenas {	
 	@Id
 	@GeneratedValue

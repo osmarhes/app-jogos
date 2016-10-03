@@ -7,7 +7,6 @@ import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 import org.dozer.Mapper;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -23,7 +22,6 @@ import br.com.loteria.app.service.ConcursosService;
 import br.com.loteria.app.validator.ConcursosValidator;
 import br.com.loteria.app.viewmodel.ResultadoBean;
 
-@Controller
 @Transactional
 @RequestMapping("/concursos")
 public class ConcursosController {

@@ -12,13 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(exclude="dezenas")
-@Entity(name="concursos")
+@Entity
+@Table(name="concursos")
 public class Concursos {
 	@Id
 	@Column(name="id_concursos")

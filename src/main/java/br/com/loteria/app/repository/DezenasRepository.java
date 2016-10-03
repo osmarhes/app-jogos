@@ -13,7 +13,7 @@ import br.com.loteria.app.entity.Dezenas;
 @Repository
 public interface DezenasRepository extends JpaRepository<Dezenas, Integer> {
 	
-	@Query("select COUNT(d.numero), d.numero from dezenas d left join "
+	@Query("select COUNT(d.numero), d.numero from Dezenas d left join "
 			+ " d.concurso c where c.dataSorteio between :first and :second group by d.numero")
-	List<Object[]> countList(@Param("first") Date first, @Param("second") Date second);
+	List<Object[]> countList(@Param("first") final Date first, @Param("second") final Date second);
 }
